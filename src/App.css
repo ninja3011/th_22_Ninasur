@@ -1,0 +1,62 @@
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(187, 187, 187); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(168, 166, 166); 
+  }
+
+
+.dashboard_splash {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(./assets/images/weather/clear.jpg); */
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.smoke {
+    background-image: url(./assets/images/weather/smoke.jpg);
+}
+
+.clear {
+  background-image: url(./assets/images/weather/clear.jpg);
+}
+
+.thunderstorm {
+  background-image: url(./assets/images/weather/thunder.jpg);
+}
+
+.drizzle {
+  background-image: url(./assets/images/weather/drizzle.jpg);
+}
+
+.rain {
+  background-image: url(./assets/images/weather/rain.jpg);
+}
+
+.snow {
+  background-image: url(./assets/images/weather/snow.jpg);
+}
+
+.cloudy {
+  background-image: url(./assets/images/weather/cloudy.jpg);
+}
