@@ -47,9 +47,12 @@ const FirebaseLogin = ({ ...others }) => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(authentication, provider)
             .then((result) => {
-                console.log(result);
+                localStorage.setItem('User', JSON.stringify({ email: result.user.email, uid: result.user.uid }));
             })
-            .catch((err) => alert(err));
+            .catch((err) => alert(err))
+            .finally(() => {
+                history('/');
+            });
     };
 
     const [showPassword, setShowPassword] = useState(false);
