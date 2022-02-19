@@ -16,7 +16,7 @@ function LiveChat() {
     <div>
         <div className="App">
      <header className="app-header">
-       React Chat
+       Disaster Live Chat
      </header>
 
   { socket ? (
