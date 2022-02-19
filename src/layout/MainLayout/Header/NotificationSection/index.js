@@ -162,11 +162,6 @@ const NotificationSection = () => {
                                                         />
                                                     </Stack>
                                                 </Grid>
-                                                <Grid item>
-                                                    <Typography component={Link} to="#" variant="subtitle2" color="primary">
-                                                        Mark as all read
-                                                    </Typography>
-                                                </Grid>
                                             </Grid>
                                         </Grid>
                                         <Grid item xs={12}>

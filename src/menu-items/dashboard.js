@@ -4,6 +4,9 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import UmbrellaIcon from '@mui/icons-material/Umbrella';
 import AirIcon from '@mui/icons-material/Air';
 import CallSplitIcon from '@mui/icons-material/CallSplit';
+import AddIcon from '@mui/icons-material/Add';
+import LayersRoundedIcon from '@mui/icons-material/LayersRounded';
+import ChatBubbleOutlineRoundedIcon from '@mui/icons-material/ChatBubbleOutlineRounded';
 
 // constant
 const icons = { IconDashboard };
@@ -21,13 +24,6 @@ const dashboard = {
             url: '/dashboard/default',
             icon: icons.IconDashboard,
             breadcrumbs: false
-        },
-        {
-            id: 'LiveChat',
-            title: 'LiveChat',
-            type: 'item',
-            url: '/LiveChat',
-            icon: icons.IconDashboard
         },
         {
             title: 'Earthquake',
@@ -65,7 +61,7 @@ const dashboard = {
             title: 'Create Post',
             type: 'item',
             url: '/create-post',
-            icon: icons.IconDashboard,
+            icon: AddIcon,
             breadcrumbs: false
         },
         {
@@ -73,8 +69,15 @@ const dashboard = {
             title: 'All Posts',
             type: 'item',
             url: '/allposts',
-            icon: icons.IconDashboard,
+            icon: LayersRoundedIcon,
             breadcrumbs: false
+        },
+        {
+            id: 'LiveChat',
+            title: 'LiveChat',
+            type: 'item',
+            url: '/LiveChat',
+            icon: ChatBubbleOutlineRoundedIcon
         }
     ]
 };
