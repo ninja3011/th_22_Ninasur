@@ -3,6 +3,7 @@ export const disasters = [
       "id" : "1",
       "name": "Earthquake",
       "description": "An earthquake is a weak to violent shaking of the ground produced by the sudden movement of rock materials below the earth’s surface.The earthquakes originate in tectonic plate boundary. The focus is point inside the earth where the earthquake started, sometimes called the hypocenter, and the point on the surface of the earth directly above the focus is called the epicenter. There are two ways by which we can measure the strength of an earthquake: magnitude and intensity. Magnitude is proportional to the energy released by an earthquake at the focus. It is calculated from earthquakes recorded by an instrument called seismograph. It is represented by Arabic Numbers (e.g. 4.8, 9.0). Intensity on the other hand, is the strength of an earthquake as perceived and felt by people in a certain locality. It is a numerical rating based on the relative effects to people, objects, environment, and structures in the surrounding. The intensity is generally higher near the epicenter.",
+      "url":"https://images.unsplash.com/photo-1635068741358-ab1b9813623f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1460&q=80",
       "pre": [
         "Repair deep plaster cracks in ceilings and foundations. Get expert advice if there are signs of structural defects.",
         "Anchor overhead lighting fixtures to the ceiling",
@@ -17,7 +18,7 @@ export const disasters = [
       "DOs": [
             "DROP to the ground; take COVER by getting under a sturdy table or other piece of furniture; and HOLD ON until the shaking stops. If there is no a table or desk near you, cover your face and head with your arms and crouch in an inside corner of the building.",
             "Protect yourself by staying under the lintel of an inner door, in the corner of a room, under a table or even under a bed.",
-            "Use a doorway for shelter only if it is in close proximity to you and if you know it is a strongly supported, load bearing doorway.",
+            "Use a doorway for shelter only if it is in close proximity to you and if you know it is a strongly supported doorway.",
             "Stay inside until the shaking stops and it is safe to go outside. Research has shown that most injuries occur when people inside buildings attempt to move to a different location inside the building or try to leave.",
             "Be aware that the electricity may go out or the sprinkler systems or fire alarms may turn on.",
             "If you are in open space, stay there until the shaking stops. The greatest danger exists directly outside buildings; at exits; and alongside exterior walls. Most earthquake-related casualties result from collapsing walls, flying glass, and falling objects",
@@ -27,8 +28,9 @@ export const disasters = [
       "DONTs": 
         ["If outdoors, do not move from where you are. However, move away from buildings, trees, streetlights, and utility wires.",
         "If in moving vehicle, Do not stop near or under buildings, trees, overpasses, and utility wires.",
-        "Avoid roads, bridges, or ramps that might have been damaged by the earthquake.",
-        "If Under deris ,do no t light a match."
+        "Avoid roads, bridges, or ramps that might have been damaged by the earthquake. Try to get get some help, make plea calls time to time, some help will surely be sent.",
+        "If Under deris ,do not light a match.",
+        "Do not stay near glass, windows, outside doors and walls, and anything that could fall, (such as lighting fixtures or furniture). Do not stay in the kitchen, it could be harfmul, things can fall on you."
       ],
       "post": [
         "Check yourself and others for injuries. Provide first aid for anyone who needs it.",
@@ -47,6 +49,7 @@ export const disasters = [
       "id" : "2",
       "name": "Cyclone",
       "description": "Cyclones can be the most intense storms on Earth. A cyclone is a system of winds rotating counterclockwise in the Northern Hemisphere around a low pressure center. The swirling air rises and cools, creating clouds and precipitation. There are two types of cyclones: middle latitude (mid-latitude) cyclones and tropical cyclones. Mid-latitude cyclones are the main cause of winter storms in the middle latitudes. Tropical cyclones are also known as hurricanes. An anticyclone is the opposite of a cyclone. An anticyclone’s winds rotate clockwise in the Northern Hemisphere around a center of high pressure. Air comes in from above and sinks to the ground. High pressure centers generally have fair weather",
+      "url":"https://images.unsplash.com/photo-1509592149237-bc44977d96d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
       "pre": [
         "Ensure good condition of your house so that it can withstand strong winds.",
         "Trim down trees to make sure they do not fall over telephone or electricity lines during the storm.",
@@ -69,7 +72,8 @@ export const disasters = [
         "Do not move outside the house immediately after the eye passes, as there will be wind gusts from the opposite direction.",
         "Do not drive immediately after a storm because the roads are left slippery due to heavy downpours.",
         "Stay away from concrete walls and floors because thunder lightning can pass through the metal bars in them.",
-        "Do not panic."
+        "Do not panic.",
+        "Stay calm and have faith in god."
       ],
       "post": [
         "Eat fresh dry food and keep it away from pests and flies.",
@@ -88,6 +92,7 @@ export const disasters = [
     },
     {
       "id" : "3",
+      "url": "https://images.unsplash.com/photo-1547683905-f686c993aae5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
       "name": "Flood",
       "keywords": [
         "deluge",
@@ -140,7 +145,10 @@ export const disasters = [
       ],
       "DONTs": [
         "Don't take risk- Don't enter flood waters. In case you need to, wear suitab le footwear",
-        "Don't get electrocuted - Stay away from electric polesand fallen power lines to avoid electrocution"
+        "Don't get electrocuted - Stay away from electric polesand fallen power lines to avoid electrocution",
+        "Dont go out unless the water has entirely susbsided.",
+        "Don't stand near electric poles, roads with puddles, downslopes, and open drainage systems.",
+        "Stay calm and have faith in god."
       ],
       "post": [
         "Avoid contaminated water for drinking and other usage. Flood water is usually contaminated with sewage.",
@@ -152,6 +160,7 @@ export const disasters = [
     },
     {
       "id" : "4",
+      "url":"https://images.unsplash.com/photo-1593349783603-654a7069d88d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
       "name": "Drought",
       "description": "Unlike with sudden weather events such as hurricanes, tornadoes, and thunderstorms, it is often difficult to pinpoint when a drought has started or when it has ended. The initial effects of a drought may be difficult to identify right away, so it may take weeks or months to determine that a drought has started. The end of a drought is hard to identify for the same reason. A drought may last for weeks, months, or even years. Sometimes, drought conditions can exist for a decade or more in a region. The longer a drought lasts, the greater the harmful effects it has on people.",
       "keywords": [
@@ -183,7 +192,9 @@ export const disasters = [
       ],
       "DONTs": [
         "Do not waste water, especially drinking water, as it is precious.",
-        "Do not waste food, as it could be useful for those in need."
+        "Do not waste food, as it could be useful for those in need.",
+        "Do not shower, take a bucket bath.",
+        "Stay calm and have faith in god."
       ]
     }
 ]

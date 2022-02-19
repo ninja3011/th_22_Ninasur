@@ -12,11 +12,10 @@ function LiveChat() {
         setSocket(newSocket);
         return () => newSocket.close();
     }, [setSocket]);
-
     return (
         <div>
             <div className="App">
-                <header className="app-header">React Chat</header>
+                <header className="app-header">Disaster Live Chat</header>
 
                 {socket ? (
                     <div className="chat-container">

@@ -34,7 +34,7 @@ function Messages({ socket }) {
   return (
     <div className="message-list">
       {[...Object.values(messages)]
-        .sort((a, b) => a.time - b.time)
+        .sort((a, b) => b.time - a.time)
         .map((message) => (
           <div
             key={message.id}

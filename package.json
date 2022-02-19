@@ -27,6 +27,7 @@
         "formik": "^2.2.6",
         "framer-motion": "^4.1.13",
         "history": "^5.0.0",
+        "material-ui-icons": "^1.0.0-beta.36",
         "material-ui-popup-state": "^1.8.0",
         "moment": "^2.29.1",
         "nodemon": "^2.0.15",
