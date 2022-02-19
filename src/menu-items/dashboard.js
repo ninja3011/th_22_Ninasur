@@ -23,7 +23,7 @@ const dashboard = {
             title: 'LiveChat',
             type: 'item',
             url: '/LiveChat',
-            icon: icons.IconDashboard,
+            icon: icons.IconDashboard
         },
         {
             title: 'Earthquake',
@@ -63,8 +63,15 @@ const dashboard = {
             url: '/create-post',
             icon: icons.IconDashboard,
             breadcrumbs: false
+        },
+        {
+            id: 'allposts',
+            title: 'All Posts',
+            type: 'item',
+            url: '/allposts',
+            icon: icons.IconDashboard,
+            breadcrumbs: false
         }
-
     ]
 };
 
