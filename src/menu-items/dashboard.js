@@ -8,7 +8,6 @@ const icons = { IconDashboard };
 
 const dashboard = {
     id: 'dashboard',
-    title: 'Dashboard',
     type: 'group',
     children: [
         {
@@ -48,6 +47,14 @@ const dashboard = {
             title: 'Drought',
             type: 'item',
             url: '/disasters/?id=4',
+            icon: icons.IconDashboard,
+            breadcrumbs: false
+        },
+        {
+            id: 'create-post',
+            title: 'Create Post',
+            type: 'item',
+            url: '/create-post',
             icon: icons.IconDashboard,
             breadcrumbs: false
         }

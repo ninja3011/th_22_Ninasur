@@ -14,6 +14,8 @@ const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
 const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
 const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
 
+const CreatePost = Loadable(lazy(() => import('views/createpost')));
+
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
@@ -27,18 +29,10 @@ const MainRoutes = {
             path: '/disasters',
             element: <SamplePage />
         },
-        // {
-        //     path: '/disasters/2',
-        //     element: <SamplePage />
-        // },
-        // {
-        //     path: '/disasters/3',
-        //     element: <SamplePage />
-        // },
-        // {
-        //     path: '/disasters/4',
-        //     element: <SamplePage />
-        // },
+        {
+            path: '/create-post',
+            element: <CreatePost />
+        },
         {
             path: '/',
             element: <DashboardDefault />
@@ -46,34 +40,6 @@ const MainRoutes = {
         {
             path: '/dashboard/default',
             element: <DashboardDefault />
-        },
-        {
-            path: '/utils/util-typography',
-            element: <UtilsTypography />
-        },
-        {
-            path: '/utils/util-color',
-            element: <UtilsColor />
-        },
-        {
-            path: '/utils/util-shadow',
-            element: <UtilsShadow />
-        },
-        {
-            path: '/icons/tabler-icons',
-            element: <UtilsTablerIcons />
-        },
-        {
-            path: '/icons/material-icons',
-            element: <UtilsMaterialIcons />
-        },
-        {
-            path: '/sample-page',
-            element: <SamplePage />
-        },
-        {
-            path: '/logout',
-            element: <SamplePage />
         }
     ]
 };
