@@ -24,21 +24,21 @@ const MainRoutes = {
     element: <MainLayout />,
     children: [
         {
-            path: '/disasters',
-            element: <SamplePage />
+            path: '/disasters/1',
+            element: <SamplePage id={1} />
         },
-        // {
-        //     path: '/disasters/2',
-        //     element: <SamplePage />
-        // },
-        // {
-        //     path: '/disasters/3',
-        //     element: <SamplePage />
-        // },
-        // {
-        //     path: '/disasters/4',
-        //     element: <SamplePage />
-        // },
+        {
+            path: '/disasters/2',
+            element: <SamplePage id={2} />
+        },
+        {
+            path: '/disasters/3',
+            element: <SamplePage id={3} />
+        },
+        {
+            path: '/disasters/4',
+            element: <SamplePage id={4} />
+        },
         {
             path: '/',
             element: <DashboardDefault />
