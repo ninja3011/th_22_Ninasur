@@ -4,6 +4,6 @@
         "module": "commonjs",
         "baseUrl": "src"
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "LiveChat", "server.js"],
     "exclude": ["node_modules"]
 }
