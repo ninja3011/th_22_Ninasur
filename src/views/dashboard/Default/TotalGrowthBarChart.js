@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import { Grid, MenuItem, TextField, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 
 // third-party
 import ApexCharts from 'apexcharts';
-import Chart from 'react-apexcharts';
 
 // project imports
 import SkeletonTotalGrowthBarChart from 'ui-component/cards/Skeleton/TotalGrowthBarChart';
@@ -18,25 +17,9 @@ import { gridSpacing } from 'store/constant';
 // chart data
 import chartData from './chart-data/total-growth-bar-chart';
 
-const status = [
-    {
-        value: 'today',
-        label: 'Today'
-    },
-    {
-        value: 'month',
-        label: 'This Month'
-    },
-    {
-        value: 'year',
-        label: 'This Year'
-    }
-];
-
 // ==============================|| DASHBOARD DEFAULT - TOTAL GROWTH BAR CHART ||============================== //
 
 const TotalGrowthBarChart = ({ isLoading }) => {
-    const [value, setValue] = useState('today');
     const theme = useTheme();
     const customization = useSelector((state) => state.customization);
 
@@ -114,7 +97,7 @@ const TotalGrowthBarChart = ({ isLoading }) => {
                             <Chart {...chartData} />
                         </Grid> */}
                     </Grid>
-                    <iframe title='ad' width="100%" height="450" src="https://embed.windy.com/embed2.html?lat=19.196&lon=72.967&detailLat=19.196&detailLon=72.967&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+                    <iframe title='ad' width="100%" height="450" src="https://embed.windy.com/embed2.html?lat=19.196&lon=72.967&detailLat=19.196&detailLon=72.967&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameBorder="0"></iframe>
                 </MainCard>
             )}
         </>

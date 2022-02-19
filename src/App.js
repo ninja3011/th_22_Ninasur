@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
 import './App.css'
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
@@ -11,6 +12,7 @@ import themes from 'themes';
 
 // project imports
 import NavigationScroll from 'layout/NavigationScroll';
+
 
 // ==============================|| APP ||============================== //
 
@@ -26,7 +28,9 @@ const App = () => {
                 </NavigationScroll>
             </ThemeProvider>
         </StyledEngineProvider>
-    );
+
+
+        );
 };
 
 export default App;

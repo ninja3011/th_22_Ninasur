@@ -1,0 +1,15 @@
+form {
+    max-width: 500px;
+    width: 100%;
+    padding: 0.675rem;
+    border-radius: 10px;
+    border-color: #ff5454;
+  }
+  
+  input {
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px; 
+    border-color: #ff5454;
+  }
