@@ -86,7 +86,7 @@ const NotificationList = () => {
             <ListItemWrapper>
                 <ListItem alignItems="center">
                     <ListItemAvatar>
-                        <Avatar alt="John Doe" src={User1} />
+                        <Avatar alt="John Doe" src="https://avatars.dicebear.com/api/open-peeps/3.svg" />
                     </ListItemAvatar>
                     <ListItemText primary="John Doe" />
                     <ListItemSecondaryAction>

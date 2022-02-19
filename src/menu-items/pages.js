@@ -7,6 +7,7 @@ const icons = {
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
+const user = localStorage.getItem('User')
 
 const pages = {
     id: 'pages',
@@ -20,21 +21,29 @@ const pages = {
             type: 'collapse',
             icon: icons.IconKey,
 
-            children: [
+            children: !user ? [
                 {
                     id: 'login3',
                     title: 'Login',
                     type: 'item',
-                    url: '/pages/login/login3',
+                    url: '/pages/login',
                     target: true
                 },
                 {
                     id: 'register3',
                     title: 'Register',
                     type: 'item',
-                    url: '/pages/register/register3',
+                    url: '/pages/register',
                     target: true
                 }
+            ] : [
+                {
+                    id: 'logout',
+                    title: 'Logout',
+                    type: 'item',
+                    url: '/logout',
+                    target: true
+                },
             ]
         }
     ]

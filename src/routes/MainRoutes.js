@@ -54,6 +54,10 @@ const MainRoutes = {
         {
             path: '/sample-page',
             element: <SamplePage />
+        },
+        {
+            path: '/logout',
+            element: <SamplePage />
         }
     ]
 };

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 // material-ui
@@ -6,17 +7,14 @@ import { useTheme } from '@mui/material/styles';
 import {
     Box,
     Button,
-    Checkbox,
     Divider,
     FormControl,
-    FormControlLabel,
     FormHelperText,
     Grid,
     IconButton,
     InputAdornment,
     InputLabel,
     OutlinedInput,
-    Stack,
     Typography,
     useMediaQuery
 } from '@mui/material';
@@ -26,7 +24,6 @@ import * as Yup from 'yup';
 import { Formik } from 'formik';
 
 // project imports
-import useScriptRef from 'hooks/useScriptRef';
 import AnimateButton from 'ui-component/extended/AnimateButton';
 
 // assets
@@ -35,17 +32,24 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 import Google from 'assets/images/icons/social-google.svg';
 
+import { authentication } from 'utils/firebase-config';
+import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword} from 'firebase/auth';
+
 // ============================|| FIREBASE - LOGIN ||============================ //
 
 const FirebaseLogin = ({ ...others }) => {
     const theme = useTheme();
-    const scriptedRef = useScriptRef();
     const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));
     const customization = useSelector((state) => state.customization);
-    const [checked, setChecked] = useState(true);
+    const history = useNavigate();
 
     const googleHandler = async () => {
-        console.error('Login');
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(authentication, provider)
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((err) => alert(err));
     };
 
     const [showPassword, setShowPassword] = useState(false);
@@ -55,6 +59,19 @@ const FirebaseLogin = ({ ...others }) => {
 
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
+    };
+
+    const signInUser = (email, password) => {
+        signInWithEmailAndPassword(authentication, email, password)
+            .then((result) => {
+                localStorage.setItem('User', JSON.stringify({ email: result.user.email, uid: result.user.uid }));
+            })
+            .catch((error) => {
+                alert(error);
+            })
+            .finally(() => {
+                history('/');
+            });
     };
 
     return (
@@ -120,34 +137,23 @@ const FirebaseLogin = ({ ...others }) => {
 
             <Formik
                 initialValues={{
-                    email: 'info@codedthemes.com',
-                    password: '123456',
+                    email: '',
+                    password: '',
                     submit: null
                 }}
                 validationSchema={Yup.object().shape({
                     email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
                     password: Yup.string().max(255).required('Password is required')
                 })}
-                onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
-                    try {
-                        if (scriptedRef.current) {
-                            setStatus({ success: true });
-                            setSubmitting(false);
-                        }
-                    } catch (err) {
-                        console.error(err);
-                        if (scriptedRef.current) {
-                            setStatus({ success: false });
-                            setErrors({ submit: err.message });
-                            setSubmitting(false);
-                        }
-                    }
+                onSubmit={async (values) => {
+                    console.log(values);
+                    signInUser(values.email, values.password);
                 }}
             >
                 {({ errors, handleBlur, handleChange, handleSubmit, isSubmitting, touched, values }) => (
                     <form noValidate onSubmit={handleSubmit} {...others}>
                         <FormControl fullWidth error={Boolean(touched.email && errors.email)} sx={{ ...theme.typography.customInput }}>
-                            <InputLabel htmlFor="outlined-adornment-email-login">Email Address / Username</InputLabel>
+                            <InputLabel htmlFor="outlined-adornment-email-login">Email Address</InputLabel>
                             <OutlinedInput
                                 id="outlined-adornment-email-login"
                                 type="email"
@@ -200,22 +206,6 @@ const FirebaseLogin = ({ ...others }) => {
                                 </FormHelperText>
                             )}
                         </FormControl>
-                        <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={1}>
-                            <FormControlLabel
-                                control={
-                                    <Checkbox
-                                        checked={checked}
-                                        onChange={(event) => setChecked(event.target.checked)}
-                                        name="checked"
-                                        color="primary"
-                                    />
-                                }
-                                label="Remember me"
-                            />
-                            <Typography variant="subtitle1" color="secondary" sx={{ textDecoration: 'none', cursor: 'pointer' }}>
-                                Forgot Password?
-                            </Typography>
-                        </Stack>
                         {errors.submit && (
                             <Box sx={{ mt: 3 }}>
                                 <FormHelperText error>{errors.submit}</FormHelperText>
