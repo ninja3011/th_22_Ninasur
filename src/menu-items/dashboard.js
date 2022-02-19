@@ -19,7 +19,13 @@ const dashboard = {
             breadcrumbs: false
         },
         {
-            id: '1',
+            id: 'LiveChat',
+            title: 'LiveChat',
+            type: 'item',
+            url: '/LiveChat',
+            icon: icons.IconDashboard,
+        },
+        {
             title: 'Earthquake',
             type: 'item',
             url: '/disasters/?id=1',

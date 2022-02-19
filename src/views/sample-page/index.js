@@ -7,6 +7,8 @@ import { useEffect, useState } from 'react';
 import MainCard from 'ui-component/cards/MainCard';
 import {disasters} from "./data.js";
 
+import { useNavigate } from 'react-router';
+
 // ==============================|| SAMPLE PAGE ||============================== //
 
 
@@ -17,23 +19,15 @@ const SamplePage = () => {
     const urlParams = new URLSearchParams(queryString);
     const [id, setId] = useState(urlParams.get('id'));
     const [disaster, setDisaster] = useState(disasters[0]);
+    
     useEffect(() => {
-        
-        // console.log(queryString);
-        
-        // const id = urlParams.get('id');
         setId(urlParams.get('id'));
         console.log(id);
         setDisaster(disasters[id-1]);
-        // const disaster =  disasters.filter(x => x.id == id)[0];
         console.log(disaster);
     }, []);
 
-    // const [id, setId]= useState(id);
-
-
-    // let {ID} = useParams();
-    // console.log(ID);
+    // window.location.reload() 
     
     return(
         <div style={{display:"flex", flexDirection: "column", rowGap:"1.5rem" }}>
@@ -44,12 +38,11 @@ const SamplePage = () => {
                 </p>
             </Typography>
             
-            {/* <div><p> this is {ID}</p></div> */}
         </MainCard>
         <MainCard title={"Precautionary measures to be taken before " + disaster.name}>
             <Typography variant="body2">
                 <List>
-                    <ListItem ><span>{disaster.pre[0]}</span></ListItem>
+                    <ListItem><span>{disaster.pre[0]}</span></ListItem>
                     <ListItem><span>{disaster.pre[1]}</span></ListItem>
                     <ListItem><span>{disaster.pre[2]}</span></ListItem>
                     <ListItem><span>{disaster.pre[3]}</span></ListItem>

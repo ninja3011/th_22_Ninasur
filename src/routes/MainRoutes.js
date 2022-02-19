@@ -4,6 +4,7 @@ import { lazy } from 'react';
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
 
+
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
 
@@ -16,6 +17,7 @@ const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons
 
 const CreatePost = Loadable(lazy(() => import('views/createpost')));
 
+const LiveChat =Loadable(lazy(() => import('views/LiveChat')));
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 
@@ -40,7 +42,11 @@ const MainRoutes = {
         {
             path: '/dashboard/default',
             element: <DashboardDefault />
-        }
+        },
+        {
+            path: '/LiveChat',
+            element: <LiveChat />
+        },
     ]
 };
 
