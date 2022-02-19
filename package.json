@@ -23,6 +23,7 @@
         "bayes-classifier": "^0.0.5",
         "clsx": "^1.1.1",
         "express": "^4.17.3",
+        "firebase": "^9.6.7",
         "formik": "^2.2.6",
         "framer-motion": "^4.1.13",
         "history": "^5.0.0",
